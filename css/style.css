@@ -1,0 +1,44 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.pimg1{
+    position: relative;
+    /* opacity: 0.70; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg1{
+    background-image: url('../images/band-concert-event.jpg');
+    min-height: 100%;
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #eee;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: capitalize;
+}
+
+.ptext .border{
+    background-color: #101010;
+    padding: 20px;
+}
+
+.section{
+    text-align:center;
+    padding:50px 80px;
+  }
