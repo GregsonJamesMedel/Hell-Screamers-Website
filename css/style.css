@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body, html{
     height: 100%;
     margin: 0;
@@ -51,6 +55,7 @@ body, html{
     width: 100%;
     text-align: center;
     color: #eee;
+    font-family: narkisim;
     font-size: 27px;
     letter-spacing: 8px;
     text-transform: capitalize;
@@ -70,6 +75,7 @@ body, html{
   }
 
 #header h1{
+    font-family: narkisim;
     margin: 0;
     margin-top: 5px;
     margin-left: 5px;
@@ -107,15 +113,17 @@ body, html{
 #header ul li{
       display: inline;
       padding: 10px;
+      transition: 0.3s;
   }
 
 #header ul li:hover{
     background-color: red;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 #header ul li a{
     color: #eee;
+    font-family: narkisim;
     text-decoration: none;
 }  
 
@@ -126,15 +134,19 @@ section{
     padding: 2%;
     color: #eee;
 } 
-/* total width = 8 */
 
 section h1{
     margin: 10px;
     text-align: center;
+    font-family: narkisim;
 }
 
 section p{
     margin: 0;
+}
+
+#about p{
+    text-align: justify;
 }
 
 #aboutImg{
@@ -202,6 +214,78 @@ section p{
     color: #fff;
     font-weight: bold;
 }
+
+#contact form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contact form div{
+    width: 500px;
+    margin: 10px;
+}
+
+#contact label, 
+#contact input[type=text],
+#contact input[type=tel]{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contact label{
+    font-family: narkisim;
+    font-size: 20px;
+}
+
+#contact input[type=text],
+#contact input[type=tel]{
+    height: 30px;
+    width: 500px;
+    max-width: 400px;
+    margin: 0;
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: #eee;
+
+}
+
+#contact textarea{
+    width: 500px;
+    height: 185px;
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: #eee;
+}
+
+#contact input[type=submit]{
+    width: 150px;
+    height: 40px;
+    float: right;
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: #eee;
+    font-family: narkisim;
+    font-size: 20px;
+}
+
+#contact input[type=submit]:hover{
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: bold;
+}
+
+#contact input[type=submit]:after{
+    content: "";
+    display: block;
+    clear: both;    
+}
+
+
 
 .shadow{
     text-shadow: 5px 5px 5px black;
