@@ -72,7 +72,7 @@ body, html{
     margin: 0;
     padding: 4px;
     height: 45px;
-  }
+}
 
 #header h1{
     font-family: narkisim;
@@ -82,7 +82,16 @@ body, html{
     color: #eee;
     margin-bottom: 0;
     float: left;
-  }
+}
+
+#header img{
+    width: 20px;
+    height: auto;
+    float: right;
+    margin-top: 10px; 
+    margin-right: 10px; 
+    display: none;
+}
 
 #header h1 a{
     color: #eee;
@@ -96,7 +105,7 @@ body, html{
 #header nav{
       margin: 0;
       float: right;
-  }
+}
 
 #header nav:after{
       content: "";
@@ -125,7 +134,8 @@ body, html{
     color: #eee;
     font-family: narkisim;
     text-decoration: none;
-}  
+}
+
 
 section{
     background-color: #101010;
@@ -201,9 +211,9 @@ section p{
 
 #showMore{
     border: 2px solid red;
+    border-radius: 5px;
     text-decoration: none;
     color: red;
-    border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -285,10 +295,12 @@ section p{
     clear: both;    
 }
 
-
-
 .shadow{
     text-shadow: 5px 5px 5px black;
+}
+
+.dispBlock{
+    display: block;
 }
 
 footer{
@@ -307,3 +319,57 @@ footer a{
     text-decoration: none;
     color: red;
 }
+
+@media only screen and (max-width: 650px) {
+
+    #header{
+        height: auto;
+    }
+
+    #header h1{
+        margin-top: 10px;
+        float: none;
+    }
+
+    #header img{
+       display: inline;
+       float: none;
+       position: absolute;
+       top: 5px;
+       left: 93%;
+    }
+
+    #header nav{
+        float: none;
+    }
+
+    #header nav ul{
+        padding-left: 0; 
+    }
+
+    #header nav ul li{
+        display: none;
+        text-align: center;
+    }
+
+    #about img{
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+
+    #about p{
+        margin: 10px;
+    }
+
+    #contact form div{
+        width: 100%;
+    }
+
+    #contact input[type=text],
+    #contact input[type=tel],
+    #contact textarea{
+        width: 100%;
+    }
+
+} 
