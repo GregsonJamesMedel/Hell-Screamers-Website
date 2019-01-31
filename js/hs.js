@@ -8,7 +8,7 @@ window.onload = function(){
         if(status){
             display('block');
         }else{
-           display('none');
+            display('inline');
         }
     }
 

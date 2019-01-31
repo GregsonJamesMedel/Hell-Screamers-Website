@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+.dispBlock{
+    display: block;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -297,10 +301,6 @@ section p{
 
 .shadow{
     text-shadow: 5px 5px 5px black;
-}
-
-.dispBlock{
-    display: block;
 }
 
 footer{
