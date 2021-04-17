@@ -70,74 +70,73 @@ body, html{
     padding: 20px;
 }
 
-#header{
-    background-color: #101010;
-    width: 100%;
-    margin: 0;
-    padding: 4px;
-    height: 45px;
-}
-
-#header h1{
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
     font-family: narkisim;
-    margin: 0;
-    margin-top: 5px;
-    margin-left: 5px;
-    color: #eee;
-    margin-bottom: 0;
-    float: left;
+    color: white;
 }
 
-#header img{
-    width: 20px;
-    height: auto;
-    float: right;
-    margin-top: 10px; 
-    margin-right: 10px; 
-    display: none;
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
 }
 
-#header h1 a{
-    color: #eee;
+.brand-title a{
     text-decoration: none;
+    color: #fff;
 }
 
-#header h1 a:hover{
+.brand-title a:hover{
     color: red;
+    font-size: 1.7rem;
 }
 
-#header nav{
-      margin: 0;
-      float: right;
+.navbar-links {
+    height: 100%;
 }
 
-#header nav:after{
-      content: "";
-      display: block;
-      clear: both;
-  }
-
-#header ul{
-      margin: 0;
-      margin-top: 5px;
-      list-style: none;
-  }
-
-#header ul li{
-      display: inline;
-      padding: 10px;
-      transition: 0.3s;
-  }
-
-#header ul li:hover{
-    background-color: red;
-    font-weight: bolder;
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-#header ul li a{
-    color: #eee;
-    font-family: narkisim;
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
     text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: red;
+    font-weight: bold;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 
@@ -322,34 +321,35 @@ footer a{
 
 @media only screen and (max-width: 650px) {
 
-    #header{
-        height: auto;
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    #header h1{
-        margin-top: 10px;
-        float: none;
+    .toggle-button {
+        display: flex;
     }
 
-    #header img{
-       display: inline;
-       float: none;
-       position: absolute;
-       top: 5px;
-       left: 93%;
-    }
-
-    #header nav{
-        float: none;
-    }
-
-    #header nav ul{
-        padding-left: 0; 
-    }
-
-    #header nav ul li{
+    .navbar-links {
         display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
         text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
     }
 
     #about img{
